@@ -28,7 +28,7 @@ export default {
 
   methods: {
       onSubmit(){
-        axios.post('http://127.0.0.1:8000/api/auth/register', [{name: this.userName}, {email: this.userEmail},{password: this.userPassword}])
+        axios.post('http://127.0.0.1:8000/api/auth/register', {name: this.userName, email: this.userEmail,password: this.userPassword})
         .then(function (response) {
             console.log(response);
         })
