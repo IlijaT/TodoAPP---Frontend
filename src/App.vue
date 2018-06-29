@@ -4,7 +4,7 @@
       <h1>Login</h1>
       <div class="row">
         <div class="col-xs-12">
-          <app-login></app-login>
+          
         </div>
       </div>
     </div>
@@ -24,20 +24,21 @@
 
 <script>
 
+<<<<<<< HEAD
   import Login from "./components/login.vue";
   import Register from "./components/register.vue";
 
+=======
+>>>>>>> master
   export default {
-    
-    data () {
-      return {
-        
-      }
-    },
 
     components: {
+<<<<<<< HEAD
       "app-login" : Login,
       "app-register" : Register,
+=======
+      
+>>>>>>> master
     }
 
   
