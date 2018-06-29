@@ -4,7 +4,7 @@
             <label for="name">Name</label>
             <input type="text" name="name" class="form-control" v-model="userName">
             <label for="email">Email</label>
-            <input type="text" name="email" class="form-control" v-model="userEmail">
+            <input type="email" name="email" class="form-control" v-model="userEmail">
             <label for="password">Password</label>
             <input type="password" name="password" class="form-control" v-model="userPassword">
         </div>
