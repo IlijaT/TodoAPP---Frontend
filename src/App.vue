@@ -4,7 +4,7 @@
       <h1>To DO Application</h1>
       <div class="row">
         <div class="col-xs-12">
-          <app-login></app-login>
+          
         </div>
       </div>
 
@@ -15,18 +15,11 @@
 
 <script>
 
-  import Login from "./components/login.vue";
 
   export default {
-    
-    data () {
-      return {
-        
-      }
-    },
 
     components: {
-      "app-login" : Login,
+      
     }
 
   
