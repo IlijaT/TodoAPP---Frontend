@@ -7,9 +7,7 @@
           <router-view></router-view>
         </div>
       </div>
-
     </div>
-    
   </div>
 </template>
 
@@ -19,12 +17,6 @@
   import Header from "./components/header.vue";
 
   export default {
-    
-    data () {
-      return {
-        
-      }
-    },
 
     components: {
       "app-login" : Login,
