@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <div class="container">
-      <h1>To DO Application</h1>
       <div class="row">
         <div class="col-xs-12">
-          <app-login></app-login>
+          <app-header></app-header>
+          <router-view></router-view>
         </div>
       </div>
 
@@ -16,6 +16,7 @@
 <script>
 
   import Login from "./components/login.vue";
+  import Header from "./components/header.vue";
 
   export default {
     
@@ -27,6 +28,7 @@
 
     components: {
       "app-login" : Login,
+      "app-header" : Header,
     }
 
   
