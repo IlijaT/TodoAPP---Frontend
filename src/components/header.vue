@@ -17,7 +17,7 @@
                     <router-link to="/login" class="nav-link">Login</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/" class="nav-link">Register</router-link>
+                    <router-link to="/register" class="nav-link">Register</router-link>
                 </li>
                 </ul>
             </div>
@@ -27,27 +27,6 @@
 
 
 <script>
-import axios from 'axios';
 
-export default {
-  
-  data () {
-    return {
-      userEmail: "",
-      userPassword: ""
-    }
-  },
 
-  methods: {
-      onSubmit(){
-        axios.post('http://127.0.0.1:8000/api/auth/login', {email: this.userEmail, password: this.userPassword})
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-      }
-  }
-}
 </script>
