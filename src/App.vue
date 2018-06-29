@@ -24,21 +24,10 @@
 
 <script>
 
-<<<<<<< HEAD
-  import Login from "./components/login.vue";
-  import Register from "./components/register.vue";
-
-=======
->>>>>>> master
   export default {
 
     components: {
-<<<<<<< HEAD
-      "app-login" : Login,
-      "app-register" : Register,
-=======
       
->>>>>>> master
     }
 
   
