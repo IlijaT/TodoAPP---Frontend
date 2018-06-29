@@ -8,13 +8,11 @@ export default class Auth {
   login(user) {
     return axios.post('/auth/login', user)
         .then((response) => {
-            const token = response.data.access_token;
-            localStorage.setItem('token', token);
+          localStorage.setItem('token', response.data.access_token);
         })
         .catch((error) => {
-            console.log(error);
-    });
-    
+
+        });
   }
 }
 

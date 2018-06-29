@@ -25,7 +25,7 @@ export default {
 
   methods: {
       onSubmit(){
-          auth.login({email: this.email, password: this.password});
+        auth.login({email: this.email, password: this.password});
       }
   }
 }
