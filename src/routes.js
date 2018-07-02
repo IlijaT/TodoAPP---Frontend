@@ -1,9 +1,10 @@
-import home from './components/home.vue'
-import login from './components/login.vue'
-import register from './components/register.vue'
+import HomeComponent from "./components/home.vue"
+import LoginComponent from "./components/login.vue"
+import RegisterComponent from "./components/register.vue"
+
 
 export default [
-    {path:'/', component: home},
-    {path:'/login', component: login},
-    {path:'/register', component: register}
+    {path:"/", component: HomeComponent, name: "home"},
+    {path:"/login", component: LoginComponent, name: "login"},
+    {path:"/register", component: RegisterComponent, name: "register"},
 ]
