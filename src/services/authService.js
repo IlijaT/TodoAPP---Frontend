@@ -9,10 +9,6 @@ export default class Auth {
     return axios.post('/auth/login', user)
         .then((response) => {
           localStorage.setItem('token', response.data.access_token);
-          alert("You are successfully logged in");
-        })
-        .catch((error) => {
-          alert("Something went wrong!");
         });
   }
 
@@ -20,10 +16,6 @@ export default class Auth {
     return axios.post('/auth/register', user)
         .then((response) => {
           localStorage.setItem('token', response.data.access_token);
-          alert("You are successfully registered");
-        })
-        .catch((error) => {
-          alert("Something went wrong!");
         });
   }
 }
