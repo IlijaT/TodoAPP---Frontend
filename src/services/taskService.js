@@ -5,9 +5,9 @@ export default class Task {
     axios.defaults.baseURL = 'http://localhost:8000/api'
   }
 
-  addTask(task) {
+  addTask(todo) {
 
-    return axios.post('/taks?token' + localStorage.getItem('token') , task)
+    return axios.post('/taks/' + todo + '?token=' + localStorage.getItem('token'))
         .then((response) => {
           console.log(response);
         })
@@ -18,4 +18,4 @@ export default class Task {
 
 }
 
-export const auttask = new Task();
+export const task = new Task();
