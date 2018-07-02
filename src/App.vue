@@ -8,17 +8,13 @@
 </template>
 
 <script>
-
-  import Header from "./components/header.vue";
+  import AppHeader from "./components/header.vue";
 
   export default {
 
     components: {
-      "app-header" : Header
+      AppHeader
     }
   }
 </script>
 
-<style>
-
-</style>
