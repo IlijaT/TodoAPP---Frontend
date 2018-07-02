@@ -9,6 +9,10 @@ export default class Task {
   addTask(todo) {
     return axios.post("tasks", todo);
   }
+
+  getTasks() {
+    return axios.get("tasks");
+  }
 }
 
 export const task = new Task();
