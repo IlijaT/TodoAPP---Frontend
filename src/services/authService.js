@@ -19,6 +19,7 @@ export default class Auth {
   register(user) {
     return axios.post('/auth/register', user)
         .then((response) => {
+          localStorage.setItem('token', response.data.access_token);
           alert("You are successfully registered");
         })
         .catch((error) => {
