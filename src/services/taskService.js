@@ -16,6 +16,18 @@ export default class Task {
         });
   }
 
+  getTasks(todo){
+    const token = localStorage.getItem("token");
+
+    axios.post('http://127.0.0.1:8000/api/tasks?token' + token, {title: this.title, description: this.description, priority: this.priority})
+    .then((response) => {
+        console.log(response);
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+  }
+
 }
 
 export const task = new Task();
