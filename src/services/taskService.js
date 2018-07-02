@@ -7,9 +7,8 @@ export default class Task {
   }
 
   addTask(todo) {
-    return axios.post('tasks', { todo });
+    return axios.post("tasks", todo);
   }
-
 }
 
 export const task = new Task();
