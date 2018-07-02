@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent = "onSubmit">
+    <form @submit.prevent="onSubmit">
         <div class="form-group">
             <label for="title">Title</label>
             <input type="text" name="title" class="form-control" v-model="title">
@@ -13,22 +13,23 @@
 </template>
 
 <script>
-import { task } from '../services/authService';
+import { task } from "../services/authService";
 
 export default {
   
   data () {
     return {
-      title: "",
-      description: "",
-      priority: ""
+      todo: {
+        "title": title,
+        "description": description,
+        "priority": priority
+      }
     }
   },
 
   methods: {
     onSubmit(){
-        task.addTask({title: this.title, description: this.description, priority: this.priority });
-
+      task.addTask(this.todo);
     }
   }
 }
