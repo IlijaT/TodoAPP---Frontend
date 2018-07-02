@@ -2,11 +2,12 @@ import axios from "axios"
 
 export default class Task {
   constructor () {
-    axios.defaults.baseURL = "http://localhost:8000/api/"
+    axios.defaults.baseURL = "http://localhost:8000/api/";
+    axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem("token")}`;
   }
 
   addTask(todo) {
-    return axios({ method: "POST", url: "tasks", headers: {autorizacion: localStorage.getItem("token")}, data: { todo } });
+    return axios.post('tasks', { todo });
   }
 
 }

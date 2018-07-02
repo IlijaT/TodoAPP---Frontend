@@ -20,9 +20,9 @@ export default {
   data () {
     return {
       todo: {
-        "title": title,
-        "description": description,
-        "priority": priority
+        title: "",
+        description: "",
+        priority: ""
       }
     }
   },
