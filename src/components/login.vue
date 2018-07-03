@@ -12,7 +12,7 @@
 
 
 <script>
-import { auth } from '../services/authService';
+import { auth } from "../services/authService";
 
 export default {
   
@@ -25,7 +25,11 @@ export default {
 
   methods: {
       onSubmit(){
-        auth.login({email: this.email, password: this.password});
+        auth.login({email: this.email, password: this.password})
+          .then((response) => {
+            this.email = "",
+            this.password = ""
+          });
       }
   }
 }
