@@ -13,6 +13,10 @@ export default class TaskService {
   getTasks() {
     return axios.get("tasks");
   }
+
+  editTask(todo) {
+    return axios.put("/tasks/" + todo.id, todo);
+  }
 }
 
 export const taskService = new TaskService();
