@@ -23,7 +23,11 @@
                 <h4>Title: {{ todo.title }}</h4>
                 <p>Description: {{ todo.description }}</p>
                 <p>Priotity: {{ todo.priority }}</p>
-                <h5 v-if="!todo.is_done">Not finished yet</h5>
+                <h5 v-if="!todo.is_done">Not finished yet 
+                    <span>
+                        <button @click="finishTask(todo)" type="submit" class="btn btn-primary btn-sm">Finish it</button>
+                    </span>
+                </h5>
                 <h5 v-else>Finished</h5>
                 <button @click="editTodo(todo)" type="button" class="btn btn-warning mb-1">Edit</button>
                 <button @click="deleteTodo(todo.id)" type="button" class="btn btn-danger">Delete</button>
@@ -85,6 +89,14 @@
                     .then((response) => {
                         this.$router.push({name: "tasks"});
                     });
+            },
+
+            finishTask(todo) {
+                todo.is_done = true;
+                taskService.editTask(todo)
+                .then((response) => {
+                    this.$router.push({name: "tasks"});
+                });
             }
         }
     }

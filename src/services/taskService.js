@@ -21,6 +21,7 @@ export default class TaskService {
   editTask(todo) {
     return axios.put(`/tasks/${todo.id}`, todo);
   }
+
 }
 
 export const taskService = new TaskService();
