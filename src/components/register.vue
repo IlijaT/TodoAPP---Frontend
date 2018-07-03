@@ -12,7 +12,6 @@
     </form>
 </template>
 
-
 <script>
 import { auth } from '../services/authService';
 

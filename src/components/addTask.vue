@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { task } from "../services/taskService";
+import { taskService } from "../services/taskService";
 
 export default {
   
@@ -29,7 +29,7 @@ export default {
 
   methods: {
     onSubmit(){
-      task.addTask(this.todo);
+      taskService.addTask(this.todo);
     }
   }
 }
