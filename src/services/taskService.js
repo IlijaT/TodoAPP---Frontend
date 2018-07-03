@@ -17,6 +17,10 @@ export default class TaskService {
   deleteTask(id) {
     return axios.delete(`tasks/${id}`);
   }
+  
+  editTask(todo) {
+    return axios.put(`/tasks/${todo.id}`, todo);
+  }
 }
 
 export const taskService = new TaskService();
