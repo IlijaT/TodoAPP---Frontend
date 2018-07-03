@@ -34,7 +34,7 @@ export default {
         this.todo.title = "";
         this.todo.description = "";
         this.todo.priority = "";
-        this.$router.push("/tasks");
+        this.$router.push({name: "tasks"});
       });
     }
   }

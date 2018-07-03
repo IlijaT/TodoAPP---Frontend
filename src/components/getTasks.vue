@@ -38,16 +38,16 @@
         methods: {
             getTodos() {
                 taskService.getTasks()
-                .then((response) => {
-                    this.todos = response.data;
-                });
+                    .then((response) => {
+                        this.todos = response.data;
+                    });
             },
 
             deleteTodo(id) {
                 taskService.deleteTask(id)
-                .then((response) => {
-                    this.getTodos();
-                })
+                    .then((response) => {
+                        this.getTodos();
+                    });
             }
         }
 

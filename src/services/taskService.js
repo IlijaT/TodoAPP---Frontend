@@ -15,7 +15,7 @@ export default class TaskService {
   }
 
   deleteTask(id) {
-    return axios.delete("tasks/" + id);
+    return axios.delete(`tasks/${id}`);
   }
 }
 
