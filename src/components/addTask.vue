@@ -29,7 +29,10 @@ export default {
 
   methods: {
     onSubmit(){
-      taskService.addTask(this.todo);
+      taskService.addTask(this.todo)
+        .then((response) => {
+          this.$router.push({name: "tasks"});
+        });
     }
   }
 }

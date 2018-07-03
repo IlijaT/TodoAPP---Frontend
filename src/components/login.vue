@@ -27,8 +27,8 @@ export default {
       onSubmit(){
         auth.login({email: this.email, password: this.password})
           .then((response) => {
-            this.email = "",
-            this.password = ""
+            this.email = "";
+            this.password = "";
           });
       }
   }
