@@ -16,7 +16,7 @@
             </form>
         </div>
 
-        <div v-if="!editMode">
+        <div v-else>
             <h2>Tasks to do:</h2>
             <hr>
             <div class="card card-body mb-2" v-for="todo in todos" :key="todo.id">
@@ -58,19 +58,14 @@
         methods: {
             getTodos() {
                 taskService.getTasks()
-                .then((response) => {
-                    this.todos = response.data;
-                });
+                    .then((response) => {
+                        this.todos = response.data;
+                    });
             },
 
             editTodo(todo) {
                 this.toggleMode();
-                this.todo.id = todo.id;
-                this.todo.title = todo.title;
-                this.todo.description= todo.description;
-                this.todo.priority= todo.priority;
-                this.todo.is_done= todo.is_done;
-               
+                this.todo = todo;
             },
 
             toggleMode() {
@@ -80,9 +75,9 @@
             saveChanges() {
                 this.toggleMode();
                 taskService.editTask(this.todo)
-                .then((response) => {
-                    this.$router.push("/tasks");
-                });
+                    .then((response) => {
+                        this.$router.push({name: "tasks"});
+                    });
             }
         }
     }

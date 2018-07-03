@@ -15,7 +15,7 @@ export default class TaskService {
   }
 
   editTask(todo) {
-    return axios.put("/tasks/" + todo.id, todo);
+    return axios.put(`/tasks/${todo.id}`, todo);
   }
 }
 
