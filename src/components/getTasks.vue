@@ -9,7 +9,7 @@
             <h5 v-if="!todo.is_done">Not finished yet</h5>
             <h5 v-else>Finished</h5>
             <button type="button" class="btn btn-warning mb-1">Edit</button>
-            <button type="button" class="btn btn-danger">Delete</button>
+            <button @click="deleteTodo(todo.id)" type="button" class="btn btn-danger">Delete</button>
         </div>
     </div>
 </template>
@@ -41,6 +41,13 @@
                 .then((response) => {
                     this.todos = response.data;
                 });
+            },
+
+            deleteTodo(id) {
+                taskService.deleteTask(id)
+                .then((response) => {
+                    this.getTodos();
+                })
             }
         }
 

@@ -13,6 +13,10 @@ export default class TaskService {
   getTasks() {
     return axios.get("tasks");
   }
+
+  deleteTask(id) {
+    return axios.delete("tasks/" + id);
+  }
 }
 
 export const taskService = new TaskService();
