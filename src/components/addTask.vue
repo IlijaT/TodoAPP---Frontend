@@ -30,12 +30,12 @@ export default {
   methods: {
     onSubmit(){
       taskService.addTask(this.todo)
-      .then((response) => {
-        this.todo.title = "";
-        this.todo.description = "";
-        this.todo.priority = "";
-        this.$router.push({name: "tasks"});
-      });
+        .then((response) => {
+          this.todo.title = "";
+          this.todo.description = "";
+          this.todo.priority = "";
+          this.$router.push({name: "tasks"});
+        });
     }
   }
 }
