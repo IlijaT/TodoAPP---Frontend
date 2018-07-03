@@ -25,7 +25,7 @@
                 <p>Priotity: {{ todo.priority }}</p>
                 <h5 v-if="!todo.is_done">Not finished yet 
                     <span>
-                        <button @click="finishTask(todo)" type="submit" class="btn btn-primary btn-sm">Finish it</button>
+                        <button @click="finishTask(todo)" type="button" class="btn btn-primary btn-sm">Finish it</button>
                     </span>
                 </h5>
                 <h5 v-else>Finished</h5>
@@ -94,9 +94,9 @@
             finishTask(todo) {
                 todo.is_done = true;
                 taskService.editTask(todo)
-                .then((response) => {
-                    this.$router.push({name: "tasks"});
-                });
+                    .then((response) => {
+                        this.$router.push({name: "tasks"});
+                    });
             }
         }
     }
