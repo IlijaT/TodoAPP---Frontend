@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export default class Task {
+export default class TaskService {
   constructor () {
     axios.defaults.baseURL = "http://localhost:8000/api/";
     axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem("token")}`;
@@ -15,4 +15,4 @@ export default class Task {
   }
 }
 
-export const task = new Task();
+export const taskService = new TaskService();

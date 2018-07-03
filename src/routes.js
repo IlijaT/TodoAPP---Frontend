@@ -1,14 +1,14 @@
-import HomeComponent from "./components/home.vue"
-import LoginComponent from "./components/login.vue"
-import RegisterComponent from "./components/register.vue"
-import AddTaskComponent from "./components/addTask.vue"
-import GetTasksComponent from "./components/getTasks.vue"
+import Home from "./components/home.vue"
+import Login from "./components/login.vue"
+import Register from "./components/register.vue"
+import AddTask from "./components/addTask.vue"
+import Tasks from "./components/getTasks.vue"
 
 
 export default [
-    {path:"/", component: HomeComponent, name: "home"},
-    {path:"/login", component: LoginComponent, name: "login"},
-    {path:"/register", component: RegisterComponent, name: "register"},
-    {path:"/add-task", component: AddTaskComponent, name: "add-task"},
-    {path:"/get-tasks", component: GetTasksComponent, name: "get-tasks"},
+    {path:"/", component: Home, name: "home"},
+    {path:"/login", component: Login, name: "login"},
+    {path:"/register", component: Register, name: "register"},
+    {path:"/add-task", component: AddTask, name: "add-task"},
+    {path:"/tasks", component: Tasks, name: "tasks"},
 ]

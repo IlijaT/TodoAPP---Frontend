@@ -8,7 +8,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <router-link :to="{ name: 'get-tasks' }" class="nav-link">See Tasks</router-link>
+                        <router-link :to="{ name: 'tasks' }" class="nav-link">See Tasks</router-link>
                     </li>
                     <li class="nav-item">
                         <router-link :to="{ name: 'add-task' }" class="nav-link">Add Task</router-link>
